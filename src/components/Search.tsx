@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Search as SearchIcon, X } from 'lucide-react';
 import { Loader } from './Loader';
 import { products, type Product } from '../data/products';

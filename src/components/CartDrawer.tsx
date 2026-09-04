@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Trash2, Minus, Plus } from 'lucide-react';
 // import { Product } from '../data/products';
@@ -71,7 +71,7 @@ export function CartDrawer({ isOpen, onClose, items, onUpdateQuantity, onCheckou
             </div>
 
             {/* Cart Items */}
-            <div className="flex-1 overflow-y-auto p-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <div className="flex-1 overflow-y-auto p-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none">
               {items.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-neutral-400 space-y-4">
                   <p className="font-sans text-sm tracking-widest uppercase">Your cart is empty</p>
