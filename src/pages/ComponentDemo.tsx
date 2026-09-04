@@ -12,6 +12,7 @@ import { products, type Product } from '../data/products';
 import { CartDrawer, type CartItemType } from '../components/CartDrawer';
 import { Search } from '../components/Search';
 import { CheckoutForm } from '../components/CheckoutForm';
+import { Footer, type FooterColumn } from '../components/Footer';
 
 export default function ComponentDemo() {
   // Store items as an array of { product, quantity }
@@ -234,6 +235,12 @@ export default function ComponentDemo() {
         </section>
       </main>
 
+      {/* The Footer Component */}
+      <Footer 
+        columns={footerData} 
+        onSubscribe={(email) => setAlert({ type: 'success', message: `Thank you! ${email} has been subscribed to our newsletter.` })} 
+      />
+
       {/* Global Toast Alert */}
       {alert && (
         <div className="fixed bottom-8 right-8 z-50 w-full max-w-sm">
@@ -271,6 +278,37 @@ export default function ComponentDemo() {
     </div>
   );
 }
+
+
+const footerData: FooterColumn[] = [
+  {
+    title: 'Shop',
+    links: [
+      { label: 'All Fragrances', href: '#' },
+      { label: 'Best Sellers', href: '#' },
+      { label: 'Discovery Sets', href: '#' },
+      { label: 'Gift Cards', href: '#' },
+    ]
+  },
+  {
+    title: 'About',
+    links: [
+      { label: 'Our Story', href: '#' },
+      { label: 'Sustainability', href: '#' },
+      { label: 'Ingredients', href: '#' },
+      { label: 'Journal', href: '#' },
+    ]
+  },
+  {
+    title: 'Support',
+    links: [
+      { label: 'Contact Us', href: '#' },
+      { label: 'Shipping & Returns', href: '#' },
+      { label: 'FAQ', href: '#' },
+      { label: 'Track Order', href: '#' },
+    ]
+  }
+];
 
 // Internal wrapper for documenting components
 function ComponentSection({ title, description, children }: { title: string; description: string; children: React.ReactNode }) {
