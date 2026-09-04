@@ -4,7 +4,7 @@ A reusable React component library and interactive product demo for a modern per
 
 ## Links
 
-- **Live deployment:** [Showcase link](https://deoncomponentlibrary.vercel.app)
+- **Live deployment:** [Showcase link](https://deon-component-library.vercel.app)
 - **GitHub repository:** [GitHub repository URL](https://github.com/gideonabe/deon-component-library)
 
 ## Project Overview
